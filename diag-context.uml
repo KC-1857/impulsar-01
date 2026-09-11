@@ -1,0 +1,72 @@
+@startuml
+' ============ ГЛОБАЛЬНЫЕ НАСТРОЙКИ ============
+skinparam shadowing false
+skinparam dpi 160
+skinparam linetype ortho
+skinparam nodesep 40
+skinparam ranksep 65
+skinparam padding 8
+skinparam roundcorner 12
+skinparam backgroundColor #FAFBFC
+skinparam defaultFontName "Segoe UI"
+skinparam defaultFontSize 13
+skinparam actorStyle awesome
+
+' ============ СТИЛИ ЭЛЕМЕНТОВ ============
+skinparam actor {
+  BackgroundColor #EAF2FB
+  BorderColor #1F5FA8
+  FontColor #0B2E4F
+  FontStyle bold
+}
+skinparam rectangle {
+  BackgroundColor #FFFFFF
+  BorderColor #3A4A5A
+  FontColor #1F2937
+}
+skinparam cloud {
+  BackgroundColor #FDECEC
+  BorderColor #C0392B
+  FontColor #7B241C
+  FontStyle bold
+}
+skinparam arrow {
+  Color #455A64
+  FontColor #37474F
+  FontSize 12
+}
+
+' ============ АКТОРЫ ============
+actor "Пользователь" as Speaker
+actor "Оператор" as Operator
+
+' ============ СИСТЕМА ============
+rectangle "Домашняя AI-станция\nOrange Pi CM4 / RK3566, ALT Linux" as Sys <<Система>> #FFF3CD
+
+' ============ ПЕРИФЕРИЯ И ВНЕШНИЕ УСТРОЙСТВА ============
+rectangle "Микрофонный модуль\nReSpeaker 2-Mic (WM8960)" as Mic  <<Устройство>> #E8F5E9
+rectangle "Индикация и органы управления\nLED, кнопка" as IO <<Устройство>> #E8F5E9
+rectangle "USB Zigbee-координатор" as Coord <<Устройство>> #E8F5E9
+rectangle "Исполнительные устройства Zigbee\n(реле, лампы, датчики)" as ZDev <<Внешние системы>> #E8F5E9
+
+cloud "Внешние облачные сервисы" as Cloud
+
+' ============ СВЯЗИ ============
+Speaker  --> Mic   : голосовая команда
+Mic      --> Sys   : аудиопоток
+Sys      --> IO    : индикация
+IO       --> Sys   : управляющие воздействия
+Sys      --> Coord : управление
+Coord <--> ZDev    : радиоинтерфейс
+Operator --> Sys   : настройка, диагностика,\nпросмотр журнала (SSH)
+Sys    -x  Cloud   : сеть
+
+' ============ ЛЕГЕНДА ============
+legend right
+  |= Цвет |= Категория |
+  | <#FFF3CD> | Система (в границах проекта) |
+  | <#E8F5E9> | Периферия / внешние устройства |
+  | <#FDECEC> | Облако (запрещено политикой) |
+  | <#EAF2FB> | Роли пользователей |
+endlegend
+@enduml
