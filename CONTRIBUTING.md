@@ -1,9 +1,11 @@
 1. How to Make a Commit and Submit a Pull Request
 
+    Repositories: public work — github.com/ArgoNavisLabs/local-station; 
+
     Fork the repository (click the Fork button on GitHub).
 
     Clone your fork:
-    git clone https://github.com/your-username/navis-home.git
+    git clone https://github.com/your-username/local-station.git
 
     Create a branch for your changes:
     git checkout -b feature/feature-name

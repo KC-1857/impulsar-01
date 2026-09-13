@@ -1,0 +1,73 @@
+@startuml
+' ============ ГЛОБАЛЬНЫЕ НАСТРОЙКИ (те же, что в контексте) ============
+skinparam shadowing false
+skinparam dpi 160
+skinparam linetype ortho
+skinparam nodesep 40
+skinparam ranksep 70
+skinparam padding 8
+skinparam roundcorner 12
+skinparam backgroundColor #FAFBFC
+skinparam defaultFontName "Segoe UI"
+skinparam defaultFontSize 13
+skinparam actorStyle awesome
+
+' ============ СТИЛИ ============
+skinparam actor {
+  BackgroundColor #EAF2FB
+  BorderColor #1F5FA8
+  FontColor #0B2E4F
+  FontStyle bold
+}
+skinparam usecase {
+  BackgroundColor #FFF3CD
+  BorderColor #B8860B
+  FontColor #4A3400
+  FontStyle bold
+}
+skinparam rectangle {
+  BackgroundColor #F4F7FA
+  BorderColor #3A4A5A
+  FontColor #1F2937
+  FontStyle bold
+}
+skinparam arrow {
+  Color #455A64
+  FontColor #37474F
+  FontSize 11
+}
+
+' ============ АКТОРЫ ============
+actor "Пользователь" as Speaker
+actor "Оператор" as Operator
+actor "Zigbee-устройство" as ZigbeeDevice <<device>> #E8F5E9
+
+' ============ ГРАНИЦА СИСТЕМЫ ============
+rectangle "Домашняя AI-станция" as SysBoundary {
+
+  usecase "UC-01. Исполнить голосовую\nкоманду Zigbee-устройством" as UC1
+  usecase "UC-02. Проиндицировать\nстатус Системы" as UC2
+  usecase "UC-03. Диагностика\nи мониторинг Системы" as UC3
+
+}
+
+' ============ СВЯЗИ АКТОРОВ ============
+Speaker      --> UC1
+Speaker      --> UC2 : наблюдает
+Operator     --> UC3
+
+' ============ СВЯЗИ С ВНЕШНИМ УСТРОЙСТВОМ ============
+UC1          --> ZigbeeDevice : команда управления
+
+' ============ ОТНОШЕНИЯ МЕЖДУ UC ============
+UC1 ..> UC2 : <<include>>
+
+' ============ ЛЕГЕНДА ============
+legend right
+  |= Цвет |= Категория |
+  | <#FFF3CD> | Use cases |
+  | <#EAF2FB> | Роли пользователей |
+  | <#E8F5E9> | Внешнее Zigbee-устройство |
+  | пунктир | Отношение <<include>> |
+endlegend
+@enduml

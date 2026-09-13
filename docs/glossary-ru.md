@@ -1,4 +1,9 @@
-# Одноплатный компьютер Orange - общий глоссарий
+# Глоссарий проекта «Домашняя AI-станция» (аппаратная часть)
+
+Версия документа: 0.1
+
+Термины аппаратной платформы стенда (Orange Pi CM4, SoC Rockchip RK3566).
+Термины и сокращения Системы — в [docs/srs-ru.md](./srs-ru.md)
 
 ## 1. Глоссарий
 
@@ -7,7 +12,7 @@
 - Device Tree - описание аппаратной конфигурации Linux;
 - DRAM (Dynamic RAM) - внешняя динамическая оперативная память (например, DDR4, LPDDR4X), требующая сложной инициализации контроллера памяти;
 - Embedded Linux - концепция дистрибутива для управления устройствами. Обычно включает: загрузчик, ядро Linux, корневую файловую систему, утилиты, библиотеки, службы;
-- eMMC (Embedded MultiMediaCard) – встроенная флеш-память для хранения системы и данных (32 ГБ на модуле);
+- eMMC (Embedded MultiMediaCard) – встроенная флеш-память для хранения системы и данных (8 ГБ на модуле CM4);
 - GPIO - (General-Purpose Input/Output) - интерфейс ввода/вывода общего назначения;
 - Idbloader - предзагрузчик Rockchip, содержащий DDR init + SPL/TPL;
 - LBA (Logical Block Addressing) — способ адресации блоков на диске или SD-карте;
@@ -32,5 +37,4 @@
 
 1. [Исходный код - репозиторий сборки OrangePi-build](https://github.com/orangepi-xunlong/orangepi-build)
 2. [Официальный сайт - характеристика платы](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-CM4-1.html)
-3. [Руководство пользователя](./files/OrangePi_CM4_RK3566_user manual_v1.2.pdf)
-4. [U-Boot поддержка Rockchip](https://docs.u-boot.org/en/v2023.10/board/rockchip/rockchip.html?utm_source=chatgpt.com)
+3. [U-Boot поддержка Rockchip](https://docs.u-boot.org/en/v2023.10/board/rockchip/rockchip.html)
