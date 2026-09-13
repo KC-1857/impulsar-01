@@ -1,41 +1,43 @@
-# local home ai station
-Open-source, self-hosted home AI station: voice assistant, local LLM/STT/TTS, smart home control. Privacy-first and extensible.
+# Impulsar-01 — Local Home AI Station
 
-## Status
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
+[![Status: Early development](https://img.shields.io/badge/Status-Early%20development-orange.svg)]()
 
-Early development — not ready for production use.
+[Русская версия](README-RU.md)
 
-## Planned Features
+Open-source home AI station: a voice assistant and smart home control on a single-board computer.
 
-- Local voice assistant
-- Local LLM / STT / TTS
-- Smart home integration
-- Privacy-first architecture
+![Prototype](docs/images/Prototipe.png)
 
+## Features
 
-## Quick Start
+- On-device Russian speech recognition in real time
+- Voice control of Zigbee devices using a fixed command vocabulary
+- LED status indication (listening, command, ready, error)
+- Event log for monitoring and diagnostics
 
-Coming soon.
+## Hardware
+
+- Orange Pi CM4 (Rockchip RK3566) single-board computer
+- Microphone expansion board
+- USB Zigbee coordinator
 
 ## Documentation
 
-Project documentation (Russian) lives in [`docs/`](docs/):
+Project documentation lives in [`docs/`](docs/):
 
-- [Vision & Scope](docs/vision-ru.md) — project vision, MVP, stakeholders, success criteria
-- [SRS](docs/srs-ru.md) — technical specification: subsystems, functional and non-functional requirements, use cases, data model, acceptance test cases
-- [Backlog](docs/backlog-ru.md) — user stories with priorities, estimates and acceptance criteria
-- [User story map](docs/user-story-map-ru.md) — user scenarios, MVP slice
-- [Hardware reference](docs/hardware-ru.md) — Orange Pi CM4 platform reference
+- [Vision & Scope](docs/vision-ru.md) — product vision, MVP scope, success criteria
+- [SRS](docs/srs-ru.md) — technical specification: requirements, use cases, acceptance tests
+- [Backlog](docs/backlog-ru.md) — user stories with priorities and estimates
+- [User story map](docs/user-story-map-ru.md) — scenarios and MVP slice
+- [Hardware reference](docs/hardware-ru.md) — Orange Pi CM4 platform details
 - [Glossary](docs/glossary-ru.md) — hardware terms
+- [Diagrams](docs/diagrams/) — PlantUML sources (context, use cases, components)
 
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting changes.
 
-Repositories: public work — [github.com/ArgoNavisLabs/local-station](https://github.com/ArgoNavisLabs/local-station);
-
 ## License
 
 Licensed under [GPL-3.0](LICENSE).
-
-## Community
