@@ -1,0 +1,112 @@
+@startuml
+<style>
+root {
+  BackgroundColor #FAFBFC
+  FontName "Segoe UI"
+  FontSize 13
+  Shadowing false
+  DPI 160
+  LineType ortho
+  NodeSep 50
+  RankSep 90
+  Padding 10
+  RoundCorner 12
+}
+
+actor {
+  BackgroundColor #EAF2FB
+  BorderColor #1F5FA8
+  FontColor #0B2E4F
+  FontStyle bold
+}
+
+rectangle {
+  BackgroundColor #FFFFFF
+  BorderColor #3A4A5A
+  FontColor #1F2937
+  RoundCorner 12
+}
+
+component {
+  BackgroundColor #FFF3CD
+  BorderColor #B8860B
+  FontColor #4A3400
+  RoundCorner 12
+}
+
+cloud {
+  BackgroundColor #FDECEC
+  BorderColor #C0392B
+  FontColor #7B241C
+  FontStyle bold
+}
+
+arrow {
+  LineColor #455A64
+  FontColor #37474F
+  FontSize 11
+}
+</style>
+
+skinparam actorStyle awesome
+
+' ============ АКТОРЫ ============
+actor "Пользователь\n[Person]" as User #EAF2FB
+actor "Оператор\n[Person]" as Operator #EAF2FB
+
+' ============ ГРАНИЦА СИСТЕМЫ ============
+rectangle "Домашняя AI-станция\n[System]" as SysBoundary {
+
+  component "П1. Захват аудио" as P1
+  component "П2. Детекция речи" as P2
+  component "П3. Распознавание речи" as P3
+  component "П4. Индикация (LED)" as P4
+  component "П5. Исполнение\n, журнал,\nсамовосстановление" as P5
+  component "П6. Интерпретация команд" as P6
+  component "П7. Zigbee-мост\nUSB-адаптер" as P7
+
+  ' Внутренний аппаратный слой
+  rectangle "Аппаратная периферия\nМикрофонный модуль, LED, кнопки" as HW #E8F5E9
+}
+
+' ============ ВНЕШНИЕ СИСТЕМЫ ============
+rectangle "USB Zigbee-адаптер\n[External System]" as Coord #E8F5E9
+rectangle "Исполнительные Zigbee-устройства\n[External System]\nРеле, лампы" as ZDev #E8F5E9
+
+' ============ СВЯЗИ АКТОРОВ ============
+User     --> HW : голосовая команда
+Operator --> P5 : SSH: настройка,\nдиагностика, журнал
+
+' ============ ВНУТРЕННИЕ ПОТОКИ (основной цикл UC-01) ============
+HW  --> P1 : аудиопоток
+P1  --> P2 : аудиопоток
+P2  --> P3 : речевой сегмент
+P3  --> P6 : текст транскрипта
+P6  --> P7 : событие управления
+P6  --> P4 : команда индикации\nфазы «команда»
+P7  --> P4 : команда индикации\nфазы «ошибка»
+P3  ..> P4 : фаза «распознаю»
+P4  --> HW : управление\nLED-светодиодами
+
+' ============ УПРАВЛЕНИЕ СЕРВИСАМИ ============
+P5 ..> P1 : запуск,\nжурнал,\nсамовосстановление
+P5 ..> P2
+P5 ..> P3
+P5 ..> P4
+P5 ..> P6
+P5 ..> P7
+
+' ============ СВЯЗИ С ВНЕШНИМИ СИСТЕМАМИ ============
+P7  ..> Coord : команды Zigbee\n(через USB)
+Coord <--> ZDev : радиоинтерфейс\nZigbee
+
+' ============ ЛЕГЕНДА ============
+legend right
+  |= Цвет |= Элемент |
+  | <#EAF2FB> | Person |
+  | <#FFF3CD> | Компонент (П1–П8) |
+  | <#E8F5E9> | Аппаратная периферия / внешнее устройство |
+  | <#FDECEC> | Внешняя сеть (запрещена) |
+  | `-->` | Поток данных / управление |
+endlegend
+@enduml

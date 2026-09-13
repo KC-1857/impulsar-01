@@ -1,72 +1,64 @@
 @startuml
-' ============ ГЛОБАЛЬНЫЕ НАСТРОЙКИ ============
-skinparam shadowing false
-skinparam dpi 160
-skinparam linetype ortho
-skinparam nodesep 40
-skinparam ranksep 65
-skinparam padding 8
-skinparam roundcorner 12
-skinparam backgroundColor #FAFBFC
-skinparam defaultFontName "Segoe UI"
-skinparam defaultFontSize 13
-skinparam actorStyle awesome
+<style>
+root {
+  BackgroundColor #FAFBFC
+  FontName "Segoe UI"
+  FontSize 13
+  Shadowing false
+  DPI 160
+  LineType ortho
+  NodeSep 50
+  RankSep 90
+  Padding 10
+  RoundCorner 12
+}
 
-' ============ СТИЛИ ЭЛЕМЕНТОВ ============
-skinparam actor {
+actor {
   BackgroundColor #EAF2FB
   BorderColor #1F5FA8
   FontColor #0B2E4F
   FontStyle bold
 }
-skinparam rectangle {
+
+rectangle {
   BackgroundColor #FFFFFF
   BorderColor #3A4A5A
   FontColor #1F2937
+  RoundCorner 12
 }
-skinparam cloud {
-  BackgroundColor #FDECEC
-  BorderColor #C0392B
-  FontColor #7B241C
-  FontStyle bold
-}
-skinparam arrow {
-  Color #455A64
+
+arrow {
+  LineColor #455A64
   FontColor #37474F
-  FontSize 12
+  FontSize 11
 }
+</style>
 
-' ============ АКТОРЫ ============
-actor "Пользователь" as Speaker
-actor "Оператор" as Operator
+' actorStyle пока не имеет CSS-эквивалента — оставлен как skinparam
+skinparam actorStyle awesome
 
-' ============ СИСТЕМА ============
-rectangle "Домашняя AI-станция\nOrange Pi CM4 / RK3566, ALT Linux" as Sys <<Система>> #FFF3CD
+actor "Пользователь\n[Person]" as User #EAF2FB
+actor "Оператор\n[Person]" as Operator #EAF2FB
 
-' ============ ПЕРИФЕРИЯ И ВНЕШНИЕ УСТРОЙСТВА ============
-rectangle "Микрофонный модуль\nReSpeaker 2-Mic (WM8960)" as Mic  <<Устройство>> #E8F5E9
-rectangle "Индикация и органы управления\nLED, кнопка" as IO <<Устройство>> #E8F5E9
-rectangle "USB Zigbee-координатор" as Coord <<Устройство>> #E8F5E9
-rectangle "Исполнительные устройства Zigbee\n(реле, лампы, датчики)" as ZDev <<Внешние системы>> #E8F5E9
+rectangle "Домашняя AI-станция\n[System]\nOrange Pi CM4, ALT Linux\n\nГолосовое управление Zigbee-устройствами,\nиндикация фаз, журналирование\n\nВключает: микрофонный модуль, LED-светодиоды, кнопки" as System #FFF3CD
 
-cloud "Внешние облачные сервисы" as Cloud
+rectangle "USB Zigbee-адаптер\n[External System]" as Coord #E8F5E9
+rectangle "Исполнительные Zigbee-устройства\n[External System]\nРеле, лампы" as ZDev #E8F5E9
+rectangle "Сеть\n[External System]" as Cloud #FDECEC
 
-' ============ СВЯЗИ ============
-Speaker  --> Mic   : голосовая команда
-Mic      --> Sys   : аудиопоток
-Sys      --> IO    : индикация
-IO       --> Sys   : управляющие воздействия
-Sys      --> Coord : управление
-Coord <--> ZDev    : радиоинтерфейс
-Operator --> Sys   : настройка, диагностика,\nпросмотр журнала (SSH)
-Sys    -x  Cloud   : сеть
+User     --> System : голосовая команда;\nнаблюдение индикации
+Operator --> System : SSH: настройка,\nдиагностика, журнал
 
-' ============ ЛЕГЕНДА ============
+System --> Coord  : команды Zigbee\n(через USB)
+Coord  <--> ZDev  : радиоинтерфейс Zigbee
+System -x Cloud
+
 legend right
-  |= Цвет |= Категория |
-  | <#FFF3CD> | Система (в границах проекта) |
-  | <#E8F5E9> | Периферия / внешние устройства |
-  | <#FDECEC> | Облако (запрещено политикой) |
-  | <#EAF2FB> | Роли пользователей |
+  |= Цвет |= Элемент C4 |
+  | <#EAF2FB> | Person |
+  | <#FFF3CD> | System (в границах проектирования) |
+  | <#E8F5E9> | External System |
+  | <#FDECEC> | External System (Сеть) |
+  | `-x` | Без доступа |
 endlegend
 @enduml
