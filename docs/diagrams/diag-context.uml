@@ -1,0 +1,58 @@
+@startuml
+<style>
+root {
+  BackgroundColor #FAFBFC
+  FontName "Segoe UI"
+  FontSize 13
+  Shadowing false
+  DPI 160
+  LineType ortho
+  NodeSep 50
+  RankSep 90
+  Padding 10
+  RoundCorner 12
+}
+
+actor {
+  BackgroundColor #EAF2FB
+  BorderColor #1F5FA8
+  FontColor #0B2E4F
+  FontStyle bold
+}
+
+rectangle {
+  BackgroundColor #FFFFFF
+  BorderColor #3A4A5A
+  FontColor #1F2937
+  RoundCorner 12
+}
+
+arrow {
+  LineColor #455A64
+  FontColor #37474F
+  FontSize 11
+}
+</style>
+
+skinparam actorStyle awesome
+
+actor "Пользователь\n[Person]" as User #EAF2FB
+
+rectangle "Домашняя AI-станция\n[System]\nOrange Pi CM4, ALT Linux\n\nОфлайн-распознавание голосовых фраз из словаря (Vosk KWS),\nуправление Zigbee-устройствами, индикация фаз,\n\nВключает: ReSpeaker 2-Mic, 2 кнопки,\nUSB Zigbee-адаптер (внешний)" as System #FFF3CD
+
+rectangle "USB Zigbee-адаптер\n[External System]" as Coord #E8F5E9
+rectangle "Исполнительные Zigbee-устройства\n[External System]\nРеле, лампы" as ZDev #E8F5E9
+
+User     --> System : голосовая команда;\nнаблюдение индикации
+
+System --> Coord  : команды Zigbee\n(через USB)
+Coord  <--> ZDev  : радиоинтерфейс Zigbee
+
+legend right
+  |= Цвет |= Элемент C4 |
+  | <#EAF2FB> | Person |
+  | <#FFF3CD> | System (в границах проектирования) |
+  | <#E8F5E9> | External System |
+  | `-x` | Без доступа |
+endlegend
+@enduml
