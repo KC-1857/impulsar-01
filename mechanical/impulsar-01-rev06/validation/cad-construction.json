@@ -1,0 +1,82 @@
+{
+  "FreeCAD": [
+    "1",
+    "1",
+    "3",
+    "145529fe74",
+    "Unknown",
+    "2026/07/25"
+  ],
+  "checks": {
+    "body": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 63722.19940965385
+    },
+    "lid": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 42765.26338561237
+    },
+    "glazing_bar": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1129.0898254433394
+    },
+    "front_acrylic": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 9473.80224992456
+    },
+    "rear_acrylic": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 9594.561958606908
+    },
+    "left_acrylic": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6439.463557453454
+    },
+    "right_acrylic": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8556.877929851993
+    },
+    "top_acrylic": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 14241.084805693761
+    },
+    "bolt_A": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 417.66760045142155
+    },
+    "bolt_B": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 417.66760045142155
+    },
+    "nut_A": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 45.90884398536534
+    },
+    "nut_B": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 45.90884398536527
+    },
+    "bar_screw_0": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 46.875703984213324
+    },
+    "bar_screw_1": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 46.875703984213324
+    }
+  }
+}

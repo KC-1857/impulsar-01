@@ -24,6 +24,15 @@ Open-source home AI station: a voice assistant and smart home control on a singl
 - Microphone expansion board
 - USB Zigbee coordinator
 
+## Enclosure
+
+[Rev06 enclosure](mechanical/impulsar-01-rev06/README.md): printable STL, laser-cut
+acrylic DXF/SVG, fit-test coupons, an editable FreeCAD model, STEP exports and
+standalone generators. The variant directory includes all source geometry and can
+be built independently, without printer-specific profiles. See the [manufacturing guide](mechanical/impulsar-01-rev06/MANUFACTURING.md)
+and [enclosure catalogue](mechanical/README.md). Physical fit, cooling and drop
+resistance still require prototype testing.
+
 ## Documentation
 
 Project documentation lives in [`docs/`](docs/):

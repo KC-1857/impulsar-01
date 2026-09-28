@@ -153,11 +153,16 @@ activemq-data/
 .env
 .envrc
 .venv
+.venv-mechanical/
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# FreeCAD editor backups (published native documents remain tracked)
+*.FCStd1
+*.FCStd.*
 
 # Spyder project settings
 .spyderproject

@@ -1,0 +1,429 @@
+{
+  "baseline_assets": 44,
+  "source_files": {
+    "Corpus_paz_foot.stl": "6d65de99f40feab66c2c76ce3db56ff0842310b3579ac3874609e7b938ef00bb",
+    "Corpus_paz_top.stl": "a6ff3d0624732b3146712f7da2c338d73be8db94c2f97f67f044c6561950e964"
+  },
+  "meshes": {
+    "assembly/body.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 63721.1229022469,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          102.0,
+          95.0,
+          46.0
+        ]
+      ],
+      "sha256": "d016e637df701d7b5e87cb19d2b78ce0b9c82fefaf6db21504c88e7c3bb9c7b4"
+    },
+    "assembly/front_acrylic_assembly.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 9473.801944232766,
+      "bounds_mm": [
+        [
+          11.0,
+          2.7249999046325684,
+          8.0
+        ],
+        [
+          91.0,
+          5.574999809265137,
+          53.0
+        ]
+      ],
+      "sha256": "a9f2b18a6f8216ac7035771a84fb6bdd3688c86b4545da3b014251d32033bb4b"
+    },
+    "assembly/glazing_bar.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 1129.1358522332262,
+      "bounds_mm": [
+        [
+          24.0,
+          78.5,
+          52.5
+        ],
+        [
+          78.0,
+          86.5999984741211,
+          55.20000076293945
+        ]
+      ],
+      "sha256": "a5dc75807b6175e4f32b79c249e921ed155ad80fe3b13a7b718b50c8f3490533"
+    },
+    "assembly/left_acrylic_assembly.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 6439.46339039336,
+      "bounds_mm": [
+        [
+          2.7249999046325684,
+          11.5,
+          9.5
+        ],
+        [
+          5.574999809265137,
+          83.5,
+          51.5
+        ]
+      ],
+      "sha256": "00fa7f2a484d34684279c73cfe29c2e9ff52c61b329169ddc4c12284c0bf7be5"
+    },
+    "assembly/lid.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 42765.65288976583,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          43.0
+        ],
+        [
+          102.0,
+          95.0,
+          60.0
+        ]
+      ],
+      "sha256": "fe28475dcd65e9fb622e48f67a7c5fbf921b5eb7cc7f14f5f92ade738a9df834"
+    },
+    "assembly/rear_acrylic_assembly.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 9594.556819994978,
+      "bounds_mm": [
+        [
+          11.0,
+          89.42500305175781,
+          8.0
+        ],
+        [
+          91.0,
+          92.2750015258789,
+          53.0
+        ]
+      ],
+      "sha256": "384f7a39a42cf1630631da9bc58478bb84935a33127081463357ed719d280bd7"
+    },
+    "assembly/right_acrylic_assembly.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 8556.873329296553,
+      "bounds_mm": [
+        [
+          96.42500305175781,
+          11.5,
+          9.5
+        ],
+        [
+          99.2750015258789,
+          83.5,
+          51.5
+        ]
+      ],
+      "sha256": "f13007eab947f30260d34ded14e4f07fab27f6ade4997be6d795c02131de8230"
+    },
+    "assembly/top_acrylic_assembly.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 14241.07717645329,
+      "bounds_mm": [
+        [
+          11.0,
+          15.0,
+          55.07500076293945
+        ],
+        [
+          91.0,
+          80.0,
+          57.92499923706055
+        ]
+      ],
+      "sha256": "463d689b1f3cce90cdb62f9d75a121d68e107cb910b873ae7a2d272bab2e0949"
+    },
+    "print/body_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 63721.1229022469,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          102.0,
+          95.0,
+          46.0
+        ]
+      ],
+      "sha256": "d016e637df701d7b5e87cb19d2b78ce0b9c82fefaf6db21504c88e7c3bb9c7b4"
+    },
+    "print/glazing_bar_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 1129.1358522332262,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          54.0,
+          8.099998474121094,
+          2.700000762939453
+        ]
+      ],
+      "sha256": "18240851362216fff871e129407060bda1780cbf3df7bb2b4aada68599c1b6ac"
+    },
+    "print/lid_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 42765.65678966937,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          102.0,
+          95.0,
+          17.0
+        ]
+      ],
+      "sha256": "be5f90043919c12195e0c258f5ffb0df2e79a9aada31a24f6aa2d364323e3e09"
+    },
+    "coupons/actual_groove_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 1685.7115443138164,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          15.489999771118164,
+          8.3100004196167,
+          37.0
+        ]
+      ],
+      "sha256": "9b47e56eb582ca5ccd43373e828ccf71bb8d530e33cdb827f54f1ff3ef0fa4da"
+    },
+    "coupons/bar_end_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 157.20793192311777,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          8.0,
+          8.099998474121094,
+          2.700000762939453
+        ]
+      ],
+      "sha256": "3154d199c5683416184372bbd29fee87cb2a6f0b0fb5650d6e337f3109e166b0"
+    },
+    "coupons/bar_mount_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 214.637422229629,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          8.0,
+          6.799995422363281,
+          6.0
+        ]
+      ],
+      "sha256": "c3f63a9be69ea5841c031a1c0216c9fbf201de33a47c32219900aeb30c3af06a"
+    },
+    "coupons/bolt_lower_corner_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 7180.966223055256,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          17.0,
+          17.0,
+          46.0
+        ]
+      ],
+      "sha256": "8c7e0e358d88c07168d715147e321643d48a98e8dac4bcac44fe5328b84fdfbe"
+    },
+    "coupons/bolt_upper_corner_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 3553.7604463484563,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          17.0,
+          17.0,
+          17.0
+        ]
+      ],
+      "sha256": "3cbb604ccab12a06ae5caffcc267e38c2e62f2283a6a8e706b63ab259cc73341"
+    },
+    "coupons/cm4_trial_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 6439.463314931424,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          72.0,
+          42.0,
+          2.8499999046325684
+        ]
+      ],
+      "sha256": "bff4b4dfb8bdaab4ef6bdf8b901a86f87e7bb975f5e033da305a33409d752bf8"
+    },
+    "coupons/fixed_groove_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 392.400000762922,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          16.0,
+          4.299999237060547,
+          8.0
+        ]
+      ],
+      "sha256": "9a5dd68bd359904e8d9210642c52a6a5da67eb0ddc56ee324ad3f8421cf4aff2"
+    },
+    "coupons/groove_2.95_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 837.9999923706055,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          20.0,
+          6.949999809265137,
+          9.0
+        ]
+      ],
+      "sha256": "40179af00d413e22156030a381491ae886020561d87d4933ea3d7e64d01142fd"
+    },
+    "coupons/groove_3.00_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 840.0,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          20.0,
+          7.0,
+          9.0
+        ]
+      ],
+      "sha256": "5de53a0670957c92bf0ab9cee5b7b5077967841fe0f11d43fbd198560bee595a"
+    },
+    "coupons/groove_3.05_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 842.0000076293945,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          20.0,
+          7.050000190734863,
+          9.0
+        ]
+      ],
+      "sha256": "2dd96fa76ddd99f7c8c41aaa3b677ea1595b3e0c9a98ee8c3e1305c7d0c46b57"
+    },
+    "coupons/nut_corner_print.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 655.5946169131712,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          9.600000381469727,
+          7.599999904632568,
+          13.0
+        ]
+      ],
+      "sha256": "e8cad1bd2aa88fa637be345d226e8be3af1ac6ef041414d0cdd997ca0c20fdb6"
+    }
+  },
+  "multicolor_parts": 3,
+  "physical_fit_verified": false
+}

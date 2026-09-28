@@ -1,0 +1,16 @@
+{
+  "revision": "06",
+  "acrylic_thickness_mm": 2.85,
+  "groove_width_mm": 3.0,
+  "through_hole_radius_mm": 1.7,
+  "bar_pilot_radius_mm": 0.9,
+  "bar_clearance_radius_mm": 1.3,
+  "corner_chamfer_mm": 4.2,
+  "corner_blend_mm": 0.4,
+  "outer_edge_mm": 0.9,
+  "seam_inset_mm": 0.6,
+  "base_reveal_depth_mm": 0.6,
+  "body_color": "#15283f",
+  "acrylic_color": "#223951",
+  "accent_color": "#bc995e"
+}

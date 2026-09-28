@@ -1,0 +1,8 @@
+# Verified with CPython 3.14; FreeCAD is installed separately with a matching ABI.
+numpy==2.5.3
+trimesh==5.1.0
+manifold3d==3.5.3
+ezdxf==1.4.3
+shapely==2.1.2
+networkx==3.6.1
+lxml==6.0.2

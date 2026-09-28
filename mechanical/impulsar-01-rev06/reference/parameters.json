@@ -1,0 +1,63 @@
+{
+  "design": "Импульсар-01",
+  "revision": "06",
+  "body_color": "#15283f",
+  "acrylic_color": "#223951",
+  "accent_color": "#bc995e",
+  "engraving_color": "#b9cbdc",
+  "line_width_mm": 0.18,
+  "accent_depth_mm": 0.4,
+  "cm4_status": "Photo-estimated CM4 windows; physical fit unverified",
+  "render_materials": {
+    "body": [
+      0.008,
+      0.018,
+      0.045
+    ],
+    "panel": [
+      0.035,
+      0.07,
+      0.13
+    ],
+    "clip": [
+      0.2,
+      0.15,
+      0.065
+    ],
+    "mark": [
+      0.48,
+      0.6,
+      0.74
+    ],
+    "accent": [
+      0.48,
+      0.32,
+      0.12
+    ]
+  },
+  "acrylic_thickness_mm": 2.85,
+  "groove_width_mm": 3.0,
+  "seam_and_reveal_depth_mm": 0.6,
+  "bottom_well_diameter_mm": 10,
+  "screw_head_counterbore_diameter_mm": 6,
+  "screw_head_counterbore_depth_mm": 3.3,
+  "counterbore_roof_thickness_mm": 1.7,
+  "inner_wall_relief_per_side_mm": 0.5,
+  "straight_inner_wall_spacing_mm": [
+    86.4,
+    79.4
+  ],
+  "bolts": "2 x ISO 4762 M3x50",
+  "nuts": "2 x DIN 934 M3",
+  "bar_screws": "2 x DIN 7981 ST2.2x6.5",
+  "hardware_axes_mm": [
+    [
+      10,
+      10
+    ],
+    [
+      92,
+      85
+    ]
+  ]
+}

@@ -1,0 +1,2 @@
+# Preserve generated STEP exports byte-for-byte; line diffs are not useful here.
+cad/step/*.step binary
