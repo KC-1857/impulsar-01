@@ -7,9 +7,7 @@
 
 Open-source home AI station: a voice assistant and smart home control on a single-board computer.
 
-![Prototype](docs/images/prototipe-f.jpg)
-
-![Prototype](docs/images/prototipe-b.png)
+![Prototype](docs/images/blue-white.png)
 
 ## Features
 
