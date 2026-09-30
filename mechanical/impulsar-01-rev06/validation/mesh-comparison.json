@@ -1,0 +1,34 @@
+{
+  "body": {
+    "symmetric_difference_mm3": 0.00656790449072202,
+    "volume_mm3": 63721.12290224694
+  },
+  "lid": {
+    "symmetric_difference_mm3": 0.004674921837618888,
+    "volume_mm3": 42765.65290062922
+  },
+  "glazing_bar": {
+    "symmetric_difference_mm3": 5.540907909347589e-05,
+    "volume_mm3": 1129.1358522332262
+  },
+  "front_acrylic": {
+    "symmetric_difference_mm3": 0.00045330895851356353,
+    "volume_mm3": 9473.801944232766
+  },
+  "rear_acrylic": {
+    "symmetric_difference_mm3": 0.00142208105870825,
+    "volume_mm3": 9594.556819994978
+  },
+  "left_acrylic": {
+    "symmetric_difference_mm3": 0.000173070355691321,
+    "volume_mm3": 6439.46339039336
+  },
+  "right_acrylic": {
+    "symmetric_difference_mm3": 0.0014467271836770632,
+    "volume_mm3": 8556.873329296553
+  },
+  "top_acrylic": {
+    "symmetric_difference_mm3": 0.0023328192377774456,
+    "volume_mm3": 14241.07717645329
+  }
+}
