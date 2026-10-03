@@ -43,6 +43,12 @@ Project documentation lives in [`docs/`](docs/):
 - [Glossary](docs/glossary-ru.md) — hardware terms
 - [Diagrams](docs/diagrams/) — PlantUML sources (context, use cases, components)
 
+## Image
+
+The working image is available via the link:
+
+[Image link](https://drive.google.com/file/d/1G7m_2_bZuDXotqwk8EMmxWDe1scBuL78/view)
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting changes.
